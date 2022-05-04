@@ -1,4 +1,5 @@
 <template>
+ <!-- 评级练习 -->
   <div :style="fontStyle">{{ rate }}</div>
 </template>
 <script setup>
