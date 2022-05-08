@@ -2,10 +2,19 @@ import { ref, computed } from "vue";
 import { useStorage } from "./useStorage.js";
 export function useTodos() {
   let title = ref("");
+  let showModal = ref(false)
   let todos = useStorage('todos',[])
   function addNewEle() {
+    if(!title.value){
+      showModal.value = true
+      setTimeout(() => {
+        showModal.value = false
+      }, 1500);
+      return
+    }
     todos.value.push({
       title: title.value,
+      id: new Date(),
       done: false,
     });
     title.value = "";
@@ -29,5 +38,5 @@ export function useTodos() {
       });
     },
   });
-  return { title, todos, addNewEle, clearData, active, all, allDone };
+  return { title, todos, addNewEle, clearData, active, all, allDone,showModal };
 }

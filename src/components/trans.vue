@@ -2,7 +2,7 @@
   <button @click="toggle">click</button>
   <!-- <h1 v-if="showTitle">你好Vue3</h1> -->
   <hr />
-
+  <h2>动画演示</h2>
   <transition name="fade">
     <h1 v-if="showTitle">你好 Vue 3</h1>
   </transition>

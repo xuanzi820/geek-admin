@@ -1,5 +1,5 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
@@ -9,6 +9,11 @@ import HelloWorld from './components/HelloWorld.vue'
     <router-link to="/other">其他</router-link>
   </div>
   <router-view></router-view>
+  <!-- <router-view v-slot="{ Component }">
+    <transition name="route" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </router-view> -->
 </template>
 
 <style>
