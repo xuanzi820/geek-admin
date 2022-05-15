@@ -7,6 +7,7 @@ import HelloWorld from "./components/HelloWorld.vue";
     <router-link to="/">首页</router-link>
     <router-link to="/about">关于</router-link>
     <router-link to="/other">其他</router-link>
+    <router-link to="/counter">迷你vuex</router-link>
   </div>
   <router-view></router-view>
   <!-- <router-view v-slot="{ Component }">
